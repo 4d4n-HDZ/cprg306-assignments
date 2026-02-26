@@ -1,6 +1,7 @@
-import Item from "./GroceryItem.js";
+import Item from "./item.js";
 
 export default function GroceryItemList() {
+
   const item1 = {
     name: "milk, 4 L 🥛",
     quantity: 1,
@@ -73,26 +74,11 @@ export default function GroceryItemList() {
     category: "household",
   };
 
-  const items = [
-    item1,
-    item2,
-    item3,
-    item4,
-    item5,
-    item6,
-    item7,
-    item8,
-    item9,
-    item10,
-    item11,
-    item12,
-  ];
-
   return (
-    <ul className="mt-6 grid gap-3">
-      {items.map((item) => (
+    <ul>
+      {items.map((item, index) => (
         <Item
-          key={`${item.name}-${item.category}`}
+          key={index}
           name={item.name}
           quantity={item.quantity}
           category={item.category}
