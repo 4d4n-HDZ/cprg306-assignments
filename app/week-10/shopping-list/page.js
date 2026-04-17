@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { useUserAuth } from "../../contexts/AuthContext";
@@ -8,7 +8,6 @@ import { getItems, addItem } from "../_services/shopping-list-service";
 import NewItem from "./new-item";
 import ItemList from "./item-list";
 import MealIdeas from "./meal-ideas";
-import itemsData from "./items.json";
 import Image from "next/image";
  
 export default function ShoppingListPage() {
@@ -18,16 +17,9 @@ export default function ShoppingListPage() {
   const [items, setItems] = useState([]);
   const [selectedItemName, setSelectedItemName] = useState("");
  
-  // ── Load items from Firestore when user is available ──────────
-  async function loadItems() {
-    const fetchedItems = await getItems(user.uid);
-    setItems(fetchedItems);
-  }
- 
   useEffect(() => {
-    if (user) {
-      loadItems();
-    }
+    if (!user) return;
+    getItems(user.uid).then(setItems);
   }, [user]);
  
   // ── Sign out ───────────────────────────────────────────────────
