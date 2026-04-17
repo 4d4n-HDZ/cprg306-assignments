@@ -1,0 +1,44 @@
+[
+  {
+    "id": "a1b2c3d",
+    "name": "milk",
+    "quantity": "4 L",
+    "category": "Dairy"
+  },
+  {
+    "id": "e4f5g6h",
+    "name": "eggs, dozen",
+    "quantity": "1",
+    "category": "Dairy"
+  },
+  {
+    "id": "i7j8k9l",
+    "name": "bread",
+    "quantity": "1 loaf",
+    "category": "Bakery"
+  },
+  {
+    "id": "m1n2o3p",
+    "name": "chicken breast",
+    "quantity": "1 kg",
+    "category": "Meat"
+  },
+  {
+    "id": "q4r5s6t",
+    "name": "apples",
+    "quantity": "6",
+    "category": "Produce"
+  },
+  {
+    "id": "u7v8w9x",
+    "name": "orange juice",
+    "quantity": "2 L",
+    "category": "Beverages"
+  },
+  {
+    "id": "y1z2a3b",
+    "name": "pasta",
+    "quantity": "500 g",
+    "category": "Pantry"
+  }
+]
